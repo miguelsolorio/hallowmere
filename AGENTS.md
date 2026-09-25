@@ -24,7 +24,7 @@ For planning, explanations, and read-only reviews, no worktree or merge is neces
 
 ## Development and previews
 
-- `npm run dev:worktree -- --network` starts the game with the port reserved for this task and enables both local and network previews. The primary checkout uses port 5182. A deliberate `PORT` environment variable overrides the reservation.
+- `npm run dev` starts the game with the port reserved for this task and prints both local and network preview URLs. The primary checkout uses port 5182. A deliberate `PORT` environment variable overrides the reservation.
 - Defer automated tests and build validation until preparing an explicitly authorized merge into `main`, unless the user asks for them sooner. During iteration, do only the lightweight inspection needed to review the change and capture screenshots; do not run the full suite on each change.
 - Keep edits focused on the requested task. Never stash, discard, reset, or commit another task's work.
 
