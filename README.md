@@ -22,11 +22,11 @@ Requires Node.js 22 or newer. Run `npm ci` once to install the multiplayer serve
 npm run dev
 ```
 
-Open **http://127.0.0.1:5182**. To play from another device on the same network, run `npm run dev:network` and open the printed Network URL. The frontend is in `dist/`. Gameplay requires the shared WebSocket backend, included in the development server; a static host must point to a deployed backend. A WebGL2-capable browser is required. Sound begins after the first interaction.
+Open **http://127.0.0.1:5182**, or the printed Network URL to play from another device on the same network. In a task worktree, `npm run dev` uses that worktree's reserved port instead of 5182. The frontend is in `dist/`. Gameplay requires the shared WebSocket backend, included in the development server; a static host must point to a deployed backend. A WebGL2-capable browser is required. Sound begins after the first interaction.
 
-Development mode restarts the server when its code or imported gameplay modules change. A restart creates a new vigil, and open game tabs reconnect automatically. Use `npm start` to run without watching files.
+The dev server restarts when its code or imported gameplay modules change. A restart creates a new vigil, and open game tabs reconnect automatically. `npm start` runs the production server without watching files.
 
-If the game stays on the connection screen with a WebSocket error, check **http://localhost:5182/health**. It should return JSON with `ok: true` and `version: 3`. A 404 means an older or static-only server is still using port 5182: stop that process and restart with `npm run dev` (or `npm run dev:network`). Reloading the browser alone cannot update a running server.
+If the game stays on the connection screen with a WebSocket error, check **http://localhost:5182/health**. It should return JSON with `ok: true` and `version: 3`. A 404 means an older or static-only server is still using port 5182: stop that process and restart with `npm run dev`. Reloading the browser alone cannot update a running server.
 
 ## GitHub Pages
 

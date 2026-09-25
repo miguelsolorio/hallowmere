@@ -17,10 +17,10 @@ Use the returned `path` as your working directory, then run `npm ci` there. `--t
 App-created worktrees are adopted where they are; detached HEADs receive a task branch. Tasks started in the primary checkout receive a worktree under its ignored `.worktrees/` directory. Both forms use the same completion workflow. Existing files are not copied from a dirty main checkout.
 
 ```sh
-npm run dev:worktree
+npm run dev
 ```
 
-Each registered worktree has a reserved port from 5300–6299. Reservations are serialized and remain stable for follow-ups. Main retains port 5182. `PORT` can override the reservation if another unrelated application occupies a port. Run the server in only one terminal per worktree.
+Each registered worktree has a reserved port from 5300–6299. Reservations are serialized and remain stable for follow-ups. Main retains port 5182. `PORT` can override the reservation if another unrelated application occupies a port. Run the server in only one terminal per worktree. It watches files and prints both local and network URLs.
 
 ## Finish a task
 

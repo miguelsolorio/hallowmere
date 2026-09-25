@@ -292,7 +292,7 @@ Report (≤300 words): branch, commit(s), files, what you verified, anything you
 1. All wave tasks `ready-to-merge`. Ask the user once: "Gate <wave>: merge <IDs>?"
 2. On yes, from each task worktree in dependency order: `bash scripts/node22.sh node scripts/worktree.mjs finish --task hm-<ID>` (helper merges into `main` in a temp worktree, runs `npm ci && npm test && npm run build`, fast-forwards `main`). Tracker worktree last.
 3. Record merge commits in TASKS.md; set status `merged`. On `VALIDATION_FAILED`, keep the retained integration path in TASKS.md, fix in the task worktree, rerun.
-4. Post-gate smoke: `npm run dev:worktree -- --network` from the tracker worktree (merged with main), load `index.html`, check console clean, take the 13 shots when the wave touched UI.
+4. Post-gate smoke: `npm run dev` from the tracker worktree (merged with main), load `index.html`, check console clean, take the 13 shots when the wave touched UI.
 
 ### 8.5 `docs/refactor/TASKS.md` format (orchestrator-only edits)
 ```
