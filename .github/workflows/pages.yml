@@ -18,7 +18,7 @@ permissions:
 jobs:
   validate:
     name: Test and validate game
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
