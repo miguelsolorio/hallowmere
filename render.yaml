@@ -16,4 +16,4 @@ services:
       - key: NODE_VERSION
         value: "22"
       - key: ALLOWED_ORIGINS
-        value: https://miguelsolorio.github.io
+        value: https://miguelsolorio.github.io,https://miguelsolorio.com,https://www.miguelsolorio.com

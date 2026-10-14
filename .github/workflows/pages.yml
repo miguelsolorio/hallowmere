@@ -109,3 +109,13 @@ jobs:
       - name: Deploy game
         id: deployment
         uses: actions/deploy-pages@v4
+
+  deploy-site:
+    name: Deploy to miguelsolorio.com
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: prepare
+    uses: miguelsolorio/miguelsolorio.com/.github/workflows/deploy-project.yml@master
+    secrets:
+      FTP_SERVER: ${{ secrets.FTP_SERVER }}
+      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
